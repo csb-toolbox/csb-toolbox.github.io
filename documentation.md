@@ -46,7 +46,7 @@ The core library is roughly composed of:
 * bioinformatics API: ``csb.bio``, which includes stuff like ``csb.bio.io``, 
 ``csb.bio.structure``, ``csb.bio.sequence``, ``csb.bio.hmm``
 * statistics API: ``csb.statistics``, ``csb.numeric``
-* utilities - ``csb.io``, ``csb.core`
+* utilities - ``csb.io``, ``csb.core``
 
 ## Tutorials
 
