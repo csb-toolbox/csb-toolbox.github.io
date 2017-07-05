@@ -23,8 +23,8 @@ alignments, HMMs and more
 
 ## Documentation
  
-* [Documentation](documentation)
-* [Tutorials](documentation#tutorials)
+* [Documentation](documentation.md)
+* [Tutorials](documentation.md#tutorials)
 * [API docs](api-docs/)
 
 ## Download

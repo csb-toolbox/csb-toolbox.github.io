@@ -50,20 +50,20 @@ The core library is roughly composed of:
 
 ## Tutorials
 
-* [Basic Tutorial](basic-tutorial)
-* [Structures and PDB I/O](structures-and-pdb-io)
-* [Sequences, Alignments and FASTA I/O](sequences-alignments-and-fasta-io)
-* [Profile HMMs and HHpred I/O](profile-hmms-and-hhpred-io)
-* [Probability Distributions](probability-distributions)
-* [Monte Carlo Sampling](monte-carlo-sampling)
+* [Basic Tutorial](basic-tutorial.md)
+* [Structures and PDB I/O](structures-and-pdb-io.md)
+* [Sequences, Alignments and FASTA I/O](sequences-alignments-and-fasta-io.md)
+* [Profile HMMs and HHpred I/O](profile-hmms-and-hhpred-io.md)
+* [Probability Distributions](probability-distributions.md)
+* [Monte Carlo Sampling](monte-carlo-sampling.md)
 
 ## Installation
 
-Detailed instructions are provided [here](installation).
+Detailed instructions are provided [here](installation.md).
 
 ## Development
 
-Documentation for contributors can be found [here](for-developers).
+Documentation for contributors can be found [here](for-developers.md).
 
 ## More Documentation
 
