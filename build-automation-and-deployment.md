@@ -43,9 +43,21 @@ Follow these steps to build and deploy a new release:
 * Run the entire test suite on as many platforms as possible (e.g. Linux, Mac, Windows) 
   and make sure there are no failures
 * Run the entire test suite with different python versions on at least one platform (e.g. Linux)
-* Bump the version number stored in ``csb.__version__`` and commit
-* Add a new repository tag matching the new version: ``R-x.y.z``; run 
-  ``git push --tags``
+* Bump the version number stored in ``csb.__version__`` if necessary and push all final 
+  changes:
+
+    ```
+    $ git commit -a -m "bump version: x.y.z"
+    $ git push
+    ```
+    
+* Add a new repository tag matching the new version: ``R-x.y.z``
+    
+    ```
+    $ git tag R-x.y.z
+    $ git push --tags
+    ```
+    
 * Wait for the CI build to finish 
 
 #### Push to GitHub
@@ -59,9 +71,10 @@ Follow these steps to build and deploy a new release:
 #### Publish
 
 * Push the new release to PyPi: 
-```
+
+    ```
     $ pip install twine
     $ twine upload csb-*.*
-```    
+    ```    
 * Extract the API docs from the release package 
-* Push them to [api-docs](api-docs) and commit
+* Push them to [api-docs](https://github.com/csb-toolbox/csb-toolbox.github.io/tree/master/api-docs) and commit
