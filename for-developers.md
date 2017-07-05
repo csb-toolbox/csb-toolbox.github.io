@@ -20,14 +20,13 @@ Next, install all dependencies and the package in editable mode:
 Open the ``CSB`` folder in PyCharm. Don't commit any ``.idea`` files.
 
 ## Building
-
 Use ``csb.build`` to build, test and package the entire project:
 
     $ python csb/build.py -o <output directory>
 
-## CI
+## Continuous Integration
 See this article: 
-[Build Automation and Deployment](build-automation-and-deployment).
+[Build Automation and Deployment](build-automation-and-deployment.md).
 
 ## Testing
 You should run the complete test suite before each commit. All CSB 
@@ -39,7 +38,7 @@ or just:
 
     $ csb-test         
 
-To execute test suites for specific modules only:
+To execute test suites for spefic modules only:
 
     $ csb-test "csb.test.cases.module1.*" "csb.test.cases.module2"...
 
