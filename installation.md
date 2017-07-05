@@ -44,12 +44,12 @@ CSB depends on 2 very well-known and readily available python packages:
 
 INSTALLATION
 
-First get the source code from github::
+First get the source code from github:
 
     $ git clone https://github.com/csb-toolbox/CSB.git
     $ cd CSB
 
-Then install the project in editable mode::
+Then install the project in editable mode:
 
     $ pip install --editable .[dev]
 
