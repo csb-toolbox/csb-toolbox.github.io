@@ -1,3 +1,5 @@
+# Tutorial: Probability Distributions
+
 ## Probability Density Functions
 
 The ``csb.statistics.pdf`` module defines ``AbstractDensity``: a common interface 

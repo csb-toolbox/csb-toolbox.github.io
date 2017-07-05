@@ -1,4 +1,4 @@
-## Basic Tutorial
+# Basic Tutorial
 
 Perhaps one of the most frequently used parts of the library is 
 the ``csb.bio.structure`` module, which provides the ``Structure``, 

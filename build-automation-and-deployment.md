@@ -1,14 +1,14 @@
+# Build Automation and Deployment
+
 ## Manual Builds
 
 The build and test processes are implemented in CSB itself. Use ``csb.build`` 
 to build, test and package the entire project:
 
-
     $ python csb/build.py -o <output directory>
 
 This will produce a standard installable release package. If Epydoc is installed, 
 our HTML API docs will be compiled and included as well.
-
 
 ## Build and Test Automation
 
@@ -38,23 +38,30 @@ example with anaconda:
 
 Follow these steps to build and deploy a new release:
 
-1. Tag and build the release
-	* Run the entire test suite on as many platforms as possible (e.g. Linux, Mac, Windows) 
-	  and make sure there are no failures
-	* Run the entire test suite with different python versions on at least one platform (e.g. Linux)
-	* Bump the version number stored in ``csb.__version__`` and commit
-	* Add a new repository tag matching the new version: ``R-x.y.z``; commit and push
-	* Wait for the CI build to finish 
-2. Push to GitHub
-	* Login with your GitHub credentials
-	* Go to [Releases](https://github.com/csb-toolbox/CSB/releases) and find the draft release
-	  created by Travis
-	* Fill in the Name (CSB x.y.z) and Release Notes (e.g. change log, fixed issues, etc)
-	* Download the release package (tar.gz) and perform a tet installation in a virtual env
-3. Push to PyPi
-	* Login with your PyPi credentials, Gmail or OpenID
-	* Go to [PyPi](https://pypi.python.org/pypi?%3Aaction=submit_form)
-	* Browse the PKG-INFO file extracted from the release package and click "Add"
-	* Click on "files" next to the new version and add the release package (tar.gz) with type=source
-	* Extract the API docs from the release package and archive them in a zip file
-	* Browse the zip file and click "Upload Documentation"
+#### Tag and build the release
+
+* Run the entire test suite on as many platforms as possible (e.g. Linux, Mac, Windows) 
+  and make sure there are no failures
+* Run the entire test suite with different python versions on at least one platform (e.g. Linux)
+* Bump the version number stored in ``csb.__version__`` and commit
+* Add a new repository tag matching the new version: ``R-x.y.z``; run 
+  ``git push --tags``
+* Wait for the CI build to finish 
+
+#### Push to GitHub
+
+* Login with your GitHub credentials
+* Go to [Releases](https://github.com/csb-toolbox/CSB/releases) and find the draft release
+  created by Travis
+* Fill in the Name (CSB x.y.z) and Release Notes (e.g. change log, fixed issues, etc)
+* Download the release package (tar.gz) and perform a test installation in a virtual env
+
+#### Publish
+
+* Push the new release to PyPi: 
+```
+    $ pip install twine
+    $ twine upload csb-*.*
+```    
+* Extract the API docs from the release package 
+* Push them to [api-docs](api-docs) and commit

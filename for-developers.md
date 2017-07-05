@@ -1,8 +1,9 @@
-## Getting the Source
+# CSB Development
 
+## Setting up the project
 You will need to install a ``git`` client first.
 
-#### On the command line
+#### Getting the source
 Once you have git, checkout the entire project:
 
     $ git clone https://github.com/csb-toolbox/CSB.git
@@ -16,43 +17,38 @@ Next, install all dependencies and the package in editable mode:
     $ pip install --editable .[dev]
 
 #### Using PyCharm
-
 Open the ``CSB`` folder in PyCharm. Don't commit any ``.idea`` files.
 
 ## Building
 
 Use ``csb.build`` to build, test and package the entire project:
 
-
     $ python csb/build.py -o <output directory>
-    
-Full details are provided [here](Build Automation and Deployment).
+
+## CI
+See this article: 
+[Build Automation and Deployment](build-automation-and-deployment).
 
 ## Testing
-
 You should run the complete test suite before each commit. All CSB 
 tests are executed with the ``csb.test.Console``. To execute all tests:
-
 
     $ csb-test "csb.test.cases.*"
 
 or just:
 
-
     $ csb-test         
 
 To execute test suites for specific modules only:
-
 
     $ csb-test "csb.test.cases.module1.*" "csb.test.cases.module2"...
 
 Run with "-h" for help. For more details on our test framework, 
 including guidelines for writing unit test, please refer to the 
-[API documentation](https://csb-toolbox.github.io/api-docs/), package 
-[csb.test](https://csb-toolbox.github.io/api-docs/csb.test-module.html).
+[API documentation](api-docs), package 
+[csb.test](api-docs/csb.test-module.html).
 
 You should also test the syntax of your docstrings before each commit:
-
 
     $ epydoc --html -v -o /tmp --name CSB --fail-on-error --fail-on-warning --fail-on-docstring-warning csb
 
@@ -64,13 +60,12 @@ the repository to make sure that all test cases and docstring checks pass.
 We have embraced a Test-driven development (TDD) approach. That is, all 
 new features and bug fixes must be accompanied by corresponding test 
 cases in a subpackage of ``csb.test.cases``. For more details on this 
-opic please read the [API documentation](https://csb-toolbox.github.io/api-docs/), 
-package [csb.test](https://csb-toolbox.github.io/api-docs/csb.test-module.html).
+opic please read the [API documentation](api-docs), 
+package [csb.test](api-docs/csb.test-module.html).
 
 ## Style Guide
 
 #### Compatibility
-
 * make sure your code is cross-platform (Windows, Linux, Mac)
 * make sure your code is cross-interpreter compatible (python 2.7+:  
 2.7, 3.5, 3.6, ...)
@@ -85,7 +80,6 @@ by following these guidelines:
 * use ``csb.core.string`` for string ``isinstance`` checks and ``csb.core.metaclass()`` to define metaclass inheritance (details in [csb.core](https://csb-toolbox.github.io/api-docs/csb.core-module.html))
 
 #### Commit Messages
-
 You should always provide a message for each commit. Commit comments should follow the general Mercurial guidelines:
 
 * the first line should be a complete, independent sentence, which summarizes all changes

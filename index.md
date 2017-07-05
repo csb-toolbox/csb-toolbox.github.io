@@ -23,9 +23,9 @@ alignments, HMMs and more
 
 ## Documentation
  
-* [Documentation](Documentation)
-* [Tutorials](Documentation#tutorials)
-* [API docs](https://csb-toolbox.github.io/api-docs/)
+* [Documentation](documentation)
+* [Tutorials](documentation#tutorials)
+* [API docs](api-docs/)
 
 ## Download
 

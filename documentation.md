@@ -1,3 +1,5 @@
+# CSB Documentation
+
 ## Introduction
 
 CSB is a granular, object-oriented bioinformatics library, which provides 
@@ -21,7 +23,7 @@ Here we present a brief tutorial on some of the most fundamental parts of
 CSB. It will help you to get started and explore the scope of the library. 
 After going through these examples you will get enough confidence in order 
 to start experimenting with the APIs and reading the comprehensive 
-[API docs](https://csb-toolbox.github.io/api-docs/), packaged with every release.
+[API docs](api-docs), packaged with every release.
 
 ## Overview
 
@@ -35,7 +37,7 @@ in the development of the library:
 which consume objects from the core library. The framework ensures that each 
 CSB application is also reusable and can be instantiated as a regular python 
 object without any ugly side effects (sys.exit() and friends). See ``csb.apps`` 
-in our [API docs](https://csb-toolbox.github.io/api-docs/) for more details.
+in our [API docs](api-docs) for more details.
 * Test framework -- built on top of the standard unittest as a thin wrapping 
 layer. Provides some sugar like transparent management of test data files, 
 and modular test execution. ``csb.test`` will give you all the details.
@@ -48,23 +50,23 @@ The core library is roughly composed of:
 
 ## Tutorials
 
-* [Basic Tutorial](Basic%20Tutorial)
-* [Structures and PDB I/O](Structures%20and%20PDB%20IO)
-* [Sequences, Alignments and FASTA I/O](Sequence%20Alignments%20and%20FASTA%20IO)
-* [Profile HMMs and HHpred I/O](Profile%20HMMs%20and%20HHpred%20IO)
-* [Probability Distributions](Probability%20Distributions)
-* [Monte Carlo Sampling](Monte%20Carlo%20Sampling)
+* [Basic Tutorial](basic-tutorial)
+* [Structures and PDB I/O](structures-and-pdb-io)
+* [Sequences, Alignments and FASTA I/O](sequences-alignments-and-fasta-io)
+* [Profile HMMs and HHpred I/O](profile-hmms-and-hhpred-io)
+* [Probability Distributions](probability-distributions)
+* [Monte Carlo Sampling](monte-carlo-sampling)
 
 ## Installation
 
-Detailed instructions are provided [here](Installation).
+Detailed instructions are provided [here](installation).
 
 ## Development
 
-Documentation for developers can be found [here](For%20Developers).
+Documentation for contributors can be found [here](for-developers).
 
 ## More Documentation
 
 Be sure to check our tutorials and ultimately our comprehensive 
-[API docs](https://csb-toolbox.github.io/api-docs/), bundled with each release package.
+[API docs](api-docs), bundled with each release package.
 
